@@ -1,3 +1,8 @@
-a=int(input())
-print ('Предыдущее целое число' , a-1)
-print ('Следующее целое число' , a+1)
+x=int(input())
+if x>=0:
+    print (x)
+else:
+    print (-x)
+
+var = x<0
+print (var)
