@@ -5,7 +5,9 @@ if a*b==c:
    print ('Yes')
 else:
    print ('No')
-if a/b==c:
+if b == 0:
+   print ('Error')
+elif a/b==c:
    print ('Yes')
 else:
    print ('No')
