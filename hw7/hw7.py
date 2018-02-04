@@ -27,11 +27,14 @@ def middle_len(name):
     s=0
     for value in length(name).values():
         s+=value
-    ml=s/len(length(name))
+    if len(length(name))==0:
+        ml=0
+    else:
+        ml=s/len(length(name))
     return ml
 
 def adj_print(name):
-    print ('В тексте ', len(length(name)), ' существительных с суффиксом -ous-.')
+    print ('В тексте ', len(length(name)), ' прилагательных с суффиксом -ous-.')
     print('Их средняя длина: ', middle_len(name))
 
 
