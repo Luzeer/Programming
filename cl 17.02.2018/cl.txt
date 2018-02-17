@@ -1,0 +1,46 @@
+import re
+
+a=re.findall('a', 'abracadabra') #только непересекающиеся (aabracadabra: выведет аа, но ав уже нет)
+print(a)
+
+a = re.findall('[abc][dr].', 'abracadabra')#or or any
+print(a)
+
+a = re.findall('[^abc]')#любой символ, кроме abc
+print(a)
+
+a=re.findall('[a-z]')#любой символ между а и з в таблице символов
+print(a)
+
+a = re.findall('\.', 'dfg.tx')
+a = re.findall('\d', 'dfg.tx')#любая цифра
+
+a=re.findall('\d', '17.02.2018')
+print(int(''.join(a))/)
+
+a = re.findall('^a', '''abrac
+adabra''')#начало строки
+print(a)
+
+a = re.findall('a$', 'abracadabra')#конец строки
+print(a)
+
+a = re.findall('\S+', 'мама мыла\рамууа рикуип ккк4njfvhiv')
+print(a)
+
+a = re.findall('[abc]+', 'abracadabra')
+print(a)
+
+a = re.findall('\w+-?\w+', 'сине-голубой красный')
+
+. - любой символ, но ровно один
+
+\d - любая цифра
+\D - не цифра
+\w - буква и др. [a-zA-Z0-9_а-я-А-Я]
+\W - все кроме
+\s - \t \n
+\S
+'cimvol'+ - >=1
+'cimvol'* - >=0
+'cimvol'? - 0 или 1 раз
