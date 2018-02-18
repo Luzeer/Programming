@@ -22,16 +22,14 @@ def best_game():
     print ('Количество попыток: ', atts) 
     user_word = input().lower()
     while user_word != sel_word:
-        if user_word == sel_word:
-            print ('Поздравляем! Вы угадали.')
-            break
-        elif user_word == '':
+        if user_word == '':
             print ('Пока')
             break
         else:
             atts+=1
             print ('Не подходит. Попыток ты сделал уже: ', atts)
             user_word = input().lower()
+    print ('Поздравляю! Ты угадал, красавчик.')
     onemoretime()
     
 def onemoretime():
@@ -43,4 +41,5 @@ def onemoretime():
         print('Пока')
 
 best_game()
+
 
