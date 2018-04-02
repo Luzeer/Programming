@@ -1,10 +1,10 @@
 import re
  
-def readfile(name):
+def rfile(name):
     with open(name, 'r', encoding='utf-8') as f:
         return f.read()
  
-def writefile(text,name):
+def wfile(text,name):
     with open(name, 'w', encoding='utf-8') as f:
         f.write(text)
     if not f.writable:
@@ -13,8 +13,8 @@ def writefile(text,name):
 def poisk(text):
     i = 0
     text = text.split('\n')
-    for line in text:
-        if re.search('Семейство', line):
+    for st in text:
+        if re.search('Семейство', st):
             t = text[i]
             t = re.findall('[А-Я][а-я]+', t)
             i = 1
@@ -23,7 +23,7 @@ def poisk(text):
                     return t[i]
             i+=1
 name = input('Введите имя файла со статьей ')
-stat = readfile(name)
+stat = rfile(name)
 sem = poisk(stat)
 name = input('Введите имя файла для записи ')
-writefile (sem,name)
+wfile (sem, name)
