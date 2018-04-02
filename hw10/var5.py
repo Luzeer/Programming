@@ -17,12 +17,9 @@ def poisk(text):
         if re.search('Семейство', st):
             t = text[i]
             t = re.findall('[А-Я][а-я]+', t)
-            i = 1
-            for elem in t:
-                if elem == 'Семейство':
-                    return t[i]
-            i+=1
-            
+            return str(t[12])
+        i+=1
+                
 name = input('Введите имя файла со статьей: ')
 stat = rfile(name)
 sem = poisk(stat)
