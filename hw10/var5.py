@@ -6,7 +6,7 @@ def rfile(name):
  
 def wfile(text,name):
     with open(name, 'w', encoding='utf-8') as f:
-        f.write(text)
+        f.write(str(text))
     if not f.writable:
         print('Файл недоступен')
  
@@ -22,8 +22,9 @@ def poisk(text):
                 if elem == 'Семейство':
                     return t[i]
             i+=1
-name = input('Введите имя файла со статьей ')
+            
+name = input('Введите имя файла со статьей: ')
 stat = rfile(name)
 sem = poisk(stat)
-name = input('Введите имя файла для записи ')
+name = input('Введите имя файла для записи: ')
 wfile (sem, name)
