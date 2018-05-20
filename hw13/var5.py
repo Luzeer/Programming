@@ -8,9 +8,9 @@ def func(names, starting_path):
 				names.append(name)
 		if dirs != []:	
 			for d in dirs:
-				func(names, start_path + d)
+				func(names, starting_path + d)
 	return names
 
 names_list = func([], '.')
-print(names_list)
+#print(names_list)
 print(len(names_list))
