@@ -17,7 +17,6 @@ def count_char_in_word(haystack, needle):
 new_list = [[[char * count_char_in_word(word, char) for char in word] 
              for word in sent]
             for sent in tex]
-
 for word in new_list:
     for list in word:
         print(''.join(list), end=' ')
